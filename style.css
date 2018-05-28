@@ -1,1 +1,62 @@
 
+
+    
+body {
+    background-color: blue;
+    font-size:25px;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: green;
+        font-size:12px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    body {
+        background-color: red;
+        font-size: 8px;
+    }
+}
+
+
+
+.row {
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+@media only screen and (max-width: 300px) {/* For phone: */
+    #small, #medium, #large  {
+    width: 100%;
+    }
+    .row {
+        flex-direction: column;
+    }    
+}
+
+
+@media only screen and (max-width: 768px) and (min-width:301px) {
+    /* For tablets: */
+    .row 
+    { flex-direction: row;
+    flex-wrap: wrap;}
+    
+    #small {width:66vw;}
+    #medium { width:33vw;}  
+}
+
+
+@media only screen and (min-width: 769px) {
+    /* For desktop: */
+    .row  {
+        flex-direction: row;}
+    
+    #small{width:33.3vw;}
+    #medium{width:33.3vw; }
+    #large{width:33.3vw; }
+}
